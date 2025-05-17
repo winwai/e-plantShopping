@@ -239,7 +239,7 @@ function ProductList({ onHomeClick }) {
     }
 
     const handleAddToCart = (product) => {
-        console.log('Product to add:', product);
+        //console.log('Product to add:', product);
         dispatch(addItem(product)); // Dispatch the action to add the product to the cart (Redux action)
       
         setAddedToCart((prevState) => ({ // Update the local state to reflect that the product has been added
@@ -309,8 +309,9 @@ function ProductList({ onHomeClick }) {
                                 <button
                                     className="product-button"
                                     onClick={() => handleAddToCart(plant)} // Handle adding plant to cart
+                                    disabled={addedToCart[plant.name]}
                                 >
-                                    Add to Cart
+                                    {addedToCart[plant.name] ? 'Added to Cart' : 'Add to Cart'}
                                 </button>
                                 </div>
                             ))}
