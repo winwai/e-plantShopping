@@ -290,7 +290,7 @@ function ProductList({ onHomeClick }) {
                     <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                     <a href="#" onClick={(e) => handleCartClick(e)} style={styleA}>
                     {/* Your SVG Cart Icon */}
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" id="IconChangeColor" height="30" width="30">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" id="IconChangeColor" height="60" width="60">
                         <rect width="156" height="156" fill="none"></rect>
                         <circle cx="80" cy="216" r="12"></circle>
                         <circle cx="184" cy="216" r="12"></circle>
@@ -298,15 +298,18 @@ function ProductList({ onHomeClick }) {
                     </svg>
                     <span
                         style={{
-                        backgroundColor: 'red',       // Background color for the count
+                        //backgroundColor: 'green',       // Background color for the count
                         color: 'white',             // Text color
                         borderRadius: '50%',         // Make it a circle
                         padding: '5px 10px',        // Padding inside the circle
-                        fontSize: '0.8rem',         // Adjust font size as needed
+                        fontSize: '2rem',         // Adjust font size as needed
                         minWidth: '20px',           // Ensure it has some minimum width
                         textAlign: 'center',        // Center the text
                         display: 'inline-block',    // Important for proper layout
-                        lineHeight: '1rem'
+                        lineHeight: '1rem',
+                        position: 'absolute',  // Absolutely position the span
+                        top: '28px',         // Adjust vertical position
+                        right: '25px',        // Adjust horizontal position
                         }}
                     >
                         {totalQuantity}
